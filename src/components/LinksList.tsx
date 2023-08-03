@@ -10,7 +10,8 @@ const LinksList: FC<LinksListProps> = () => {
     "https://github.com/shreverr", 
     "https://twitter.com/Shreshthtwts", 
     "https://discordapp.com/users/shrever", 
-    "https://www.linkedin.com/in/shreshth-verma-89aa80246/"]
+    "https://www.linkedin.com/in/shreshth-verma-89aa80246/"
+  ]
   const myLinkIcons = [Icons.Github, Icons.Twitter, Icons.Discord, Icons.LinkedIn]
 
   return (
@@ -24,11 +25,11 @@ const LinksList: FC<LinksListProps> = () => {
     pt-4
     gap-6
     w-full
-    md:w-96
+    sm:w-96
     '>
     {/* Maps all the links */}
     {myLinkNames.map((mySocialHandle, index) => 
-      <LinkButton linkName={mySocialHandle} linkIcon={myLinkIcons[index]} userLink={myLinks[index]}/>)}
+      <LinkButton linkName={mySocialHandle} linkIcon={myLinkIcons[index]} userLink={myLinks[index] } key={index}/>)}
     </section>
   )
 }
