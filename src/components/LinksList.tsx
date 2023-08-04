@@ -2,21 +2,19 @@ import { FC } from 'react'
 import LinkButton from './ui/LinkButton'
 import { Icons } from './ui/Icons'
 
-interface LinksListProps {}
+interface LinksListProps { }
 
 const LinksList: FC<LinksListProps> = () => {
-  const myLinkNames = ["Github", "Twitter", "Discord", "LinkedIn"]
-  const myLinks = [
-    "https://github.com/shreverr", 
-    "https://twitter.com/Shreshthtwts", 
-    "https://discordapp.com/users/shrever", 
-    "https://www.linkedin.com/in/shreshth-verma-89aa80246/"
-  ]
-  const myLinkIcons = [Icons.Github, Icons.Twitter, Icons.Discord, Icons.LinkedIn]
+  const userLinks = [
+    { siteName: "Github", link: "https://github.com/shreverr", icon: Icons.Github },
+    { siteName: "Twitter", link: "https://twitter.com/Shreshthtwts", icon: Icons.Twitter },
+    { siteName: "Discord", link: "https://discordapp.com/users/shrever", icon: Icons.Discord },
+    { siteName: "LinkedIn", link: "https://www.linkedin.com/in/shreshth-verma-89aa80246/", icon: Icons.LinkedIn }
+  ];
 
   return (
     <section
-    className='
+      className='
     flex
     flex-col
     items-center
@@ -27,9 +25,9 @@ const LinksList: FC<LinksListProps> = () => {
     w-full
     sm:w-96
     '>
-    {/* Maps all the links */}
-    {myLinkNames.map((mySocialHandle, index) => 
-      <LinkButton linkName={mySocialHandle} linkIcon={myLinkIcons[index]} userLink={myLinks[index] } key={index}/>)}
+      {/* Maps all the links */}
+      {userLinks.map((element, index) =>
+        <LinkButton linkName={element.siteName} linkIcon={element.icon} userLink={element.link} key={index} />)}
     </section>
   )
 }
