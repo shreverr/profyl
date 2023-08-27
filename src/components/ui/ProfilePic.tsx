@@ -14,7 +14,7 @@ const ProfilePic: FC<ProfilePicProps> = () => {
     antialiased
     rounded-full
     outline
-    outline-offset-2
+    outline-offset-4
     w-28
     '/>
   </figure>)
