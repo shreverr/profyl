@@ -74,7 +74,7 @@ const Particle: FC<ParticleProps> = () => {
             enable: true,
             area: 800,
           },
-          value: 80,
+          value: 50,
         },
         opacity: {
           value: 1,
