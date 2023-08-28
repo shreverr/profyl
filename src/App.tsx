@@ -1,12 +1,12 @@
 import React from 'react';
 import Profile from './components/Profile';
 import LinksList from './components/LinksList';
-import Card from './components/Card';
+import Card from './components/ui/Card';
 import Particle from './components/Particle';
 
 function App() {
   return (
-    <main id="particles-js"
+    <main
       className='
     flex
     flex-col 
